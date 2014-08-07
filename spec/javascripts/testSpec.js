@@ -18,6 +18,7 @@ function converter (arg) {
 		return"";
 	};
 	arg = arg.replace("(AT)", "@");
+	arg = arg.replace("(DOT)", ".");
 	return arg;
 }
 
@@ -37,4 +38,6 @@ describe("Hide email converter", function() {
 	it("returns . where there was (DOT)", function() {
 		expect(converter('(DOT)')).toBe('.');
 	});
+
+
 });
