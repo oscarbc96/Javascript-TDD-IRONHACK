@@ -17,8 +17,6 @@ function converter (arg) {
 	if (!arg) {
 		return"";
 	};
-	arg = arg.replace("(AT)", "@");
-	arg = arg.replace("(DOT)", ".");
 	return arg;
 }
 
@@ -31,12 +29,10 @@ describe("Hide email converter", function() {
 		expect(converter('hola')).toBe('hola');
 	});
 
-	it("returns @ where there was (AT) ", function() {
-		expect(converter("(AT)")).toBe("@");
-	});
-
-	it("returns . where there was (DOT)", function() {
-		expect(converter('(DOT)')).toBe('.');
+	describe("detector", function() {
+		it("returns true if string contains AT", function() {
+			expect(detector("CONGRATULATIONS!")).toBeTruthy();
+		});
 	});
 
 
