@@ -21,4 +21,8 @@ describe("Hide email converter", function() {
 	it("returns an empty string if input is empty", function() {
 		expect(converter("")).toBe("");
 	});
+
+	it("returns the content of the passed string if there are no special cases", function(){
+		expect(converter('hola')).toBe('hola');
+	});
 });
