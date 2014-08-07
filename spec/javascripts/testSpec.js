@@ -33,4 +33,8 @@ describe("Hide email converter", function() {
 	it("returns @ where there was (AT) ", function() {
 		expect(converter("(AT)")).toBe("@");
 	});
+
+	it("returns . where there was (DOT)", function() {
+		expect(converter('(DOT)')).toBe('.');
+	});
 });
