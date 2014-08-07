@@ -17,6 +17,7 @@ function converter (arg) {
 	if (!arg) {
 		return"";
 	};
+	arg = arg.replace("(AT)", "@");
 	return arg;
 }
 
@@ -30,6 +31,6 @@ describe("Hide email converter", function() {
 	});
 
 	it("returns @ where there was (AT) ", function() {
-		expect(converter('(AT)')).toBe("@");
+		expect(converter("(AT)")).toBe("@");
 	});
 });
