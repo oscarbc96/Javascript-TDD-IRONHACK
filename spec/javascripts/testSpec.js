@@ -28,4 +28,8 @@ describe("Hide email converter", function() {
 	it("returns the content of the passed string if there are no special cases", function(){
 		expect(converter('hola')).toBe('hola');
 	});
+
+	it("returns @ where there was (AT) ", function() {
+		expect(converter('(AT)')).toBe("@");
+	});
 });
