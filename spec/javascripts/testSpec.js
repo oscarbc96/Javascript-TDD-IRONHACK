@@ -14,7 +14,7 @@
 	11. I want to send an email to carlos-AT-iexpertos(DOT)com => I want to send an email to carlos@iexpertos.com
 */
 function converter (arg) {
-
+	return '';
 }
 
 describe("Hide email converter", function() {
